@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;900&display=swap');
+
+:root {
+    --purple: #5280e2;
+    --green: #15cdcb;
+    --bg-dark:#212226;
+    --light-grey; #ebdede;
+
+    --menu-height: 75px;
+
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    background: var(--bg-dark);
+
+}
+body, button, input, select, textarea {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+h2, h1 {
+    margin: 0;
+    font-weight: 400;
+}
+p {
+    color: var(--light-grey);
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 24px;
+}
+button {
+    margin: 0;
+    background: var(--purple);
+    color: white;
+    border-radius: 16px;
+    padding: 8px 35px;
+    font-weight: bold;
+    font-size: 18px;
+}
+header {
+     height: calc(100vh - var(--menu-height));
+     display: flex;
+     align-items: center;
+}
+header .container {
+    width: 50%;
+    padding: 0 100px ;
+    height: fit-content;
+}
+header .container img {
+    display: none;
+}
+
+header .container button {
+    margin-top: 40px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-dark);
+    height: var(--menu-height);
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+}
+nav img {
+    height: 45px;
+}
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+nav ul a {
+    font-size: 22px;
+    color: var(--green);
+    text-decoration: none;
+    
+}
+.title-purple {
+    color: var(--purple);
+}
+.title-green {
+    color: var(--green);
+}
+.about-me {
+    display: flex;
+    padding: 100px;
+}
+.about-me .img-container {
+    width: 50%;
+    text-align: center;
+}
+.about-me .container{
+    width: 50%;
+    padding-right: 50px;
+}
+.about-me .img-container img {
+    width: 60%;
+}
+/*Responsividade*/
+@media (max-width: 1000px){
+header .container{
+        width: 100%;
+    }
+nav {
+        padding: 0 30px;
+    } 
+    
+}
+nav ul a svg {
+    display: none;
+}
+
+nav ul a {
+    font-size: 18px;
+}
+
+/* tablet*/
+@media (max-width: 767px) {
+header .container img {
+    display: inline;
+    margin-bottom: 70px;
+}
+nav img {
+    display: none;
+}
+nav ul {
+    padding: 0;
+}
+nav ul a {
+    font-size: 16px;
+}
+}
+/*celular*/
+@media (max-width: 480px) {
+header .container {
+    padding: 0 40px;
+}
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    top: unset;
+    padding: 0 15px;
+}
+nav ul a svg {
+    display: block;
+    margin: 0 auto 10px;
+
+}
