@@ -111,7 +111,7 @@ nav ul a {
     
 }
 .about-me .img-container img {
-    width: 50%;
+    width: 45%;
     height: 100%;
     object-fit: cover;
     
@@ -126,16 +126,16 @@ nav ul a {
     left: calc(50% - 50%/2 - 25px);
 }
 
-.img-container .line.purple {
+.about-me .img-container .line.green {
     transform: rotate(-3.3deg);
-    color: var(--green);
+    color:  var(--green);
 }
 .services {
     text-align: center;
     margin: 150px 0;
     padding: 0 100px;
 }
-.services-container {
+.services-container, .portfolio-container {
     justify-content: space-between;
     display: flex;
     max-width: 1200px;
@@ -163,92 +163,180 @@ nav ul a {
 .service-card + .service-card {
     margin-left: 10px;
 }
+.portfolio {
+    margin-bottom: 100px;
+    padding: 0 100px;
+    height: 800px;
+    text-align: center;
+    background: url(assets/portfolio-bg.png)}
+
+.portfolio .portfolio-container {
+    margin-top: 130px;
+}
+.portfolio .portfolio-container .portfolio-card {
+    background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(42px);
+    border: 1px solid white;
+
+    border-radius: 16px;
+    max-width: 360px;
+    text-align: left;
+    padding: 50px 25px;
+}
+.portfolio .portfolio-container .portfolio-card .img-container {
+    margin: 0 25px 50px;
+    position: relative;
+
+}
+.portfolio-card + .portfolio-card {
+    margin-left: 10px;
+}
+.portfolio-container .portfolio-card .img-container .line {
+     width: calc(100% + 24px);
+     height: calc(100% + 24px);
+     border: 1px solid var(--green);
+     border-radius: 16px;
+     transform: rotate(-1.93deg);
+    
+     position: absolute;
+     top: -12px;
+     left: calc(50% - 100%/2 - 12px);
+    
+}
+.portfolio .portfolio-container .portfolio-card .img-container img {
+    width: 100%;
+    
+}
+.portfolio .portfolio-container .portfolio-card .language-container {
+    margin-bottom: 20px;
+}
+.portfolio .portfolio-container .portfolio-card .language-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.portfolio .portfolio-container .portfolio-card .language-container ul li {
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    padding: 3px 15px;
+}
+.portfolio-card .language-container ul li + li {
+    margin-left: 10px;
+}
+p {
+    margin: 0;
+}
+
+
 
 
 /*Responsividade*/
-
-@media (max-width: 1000px){
-header .container{
-        width: 100%;
-    }
+/*small desktop*/
+@media (max-width: 1000px) {
+    header .container{
+    width: 100%;
+}
 nav {
-        padding: 0 30px;
-    } 
-    
+    padding: 0 30px;
+} 
+
 }
 nav ul a svg {
-    display: none;
+     display: none;
 }
 
 nav ul a {
-    font-size: 18px;
+     font-size: 18px;
 }
 .about-me {
-    flex-direction: column;
+      flex-direction: column;
 }
 .about-me .container, .about-me .img-container {
-    width: 100%;
+      width: 100%;
 }
 .about-me .container {
-    padding-right: 0;
+      padding-right: 0;
 }
 .about-me .img-container {
-    margin: 70px;
+      margin: 70px 0;
 }
-.services {
-    padding: 0;
+.services, .portfolio {
+      padding: 0;
 }
-.services .services-container{
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+
+.services .services-container, .portfolio .portfolio-container {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
 }
+
 .service-card {
-    height: 394px;
+      height: 394px;
 }
-.service-card + .service-card {
-    margin-left: 0;
-    margin-top: 30px;
+
+.service-card + .service-card, .portfolio-card + .portfolio-card {
+      margin-left: 0;
+      margin-top: 30px;
 }
+.portfolio {
+    height: 100%;
+}
+
+
 /* tablet*/
 @media (max-width: 767px) {
 header .container img {
-    display: inline;
-    margin-bottom: 70px;
+     display: inline;
+     margin-bottom: 70px;
 }
 nav img {
-    display: none;
-}
+     display: none;
+} 
 nav ul {
-    padding: 0;
+     padding: 0;
 }
 nav ul a {
-    font-size: 16px;
-}
+     font-size: 16px;
+} 
 }
 /*celular*/
 @media (max-width: 480px) {
+    body {
+        margin-bottom: calc(var(--menu-height) + 50px);
+    }
 header .container {
-    padding: 0 40px;
-}
+      padding: 0 40px;
+    }
 nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    top: unset;
-    padding: 0 15px;
-}
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      top: unset;
+      padding: 0 15px;
+    }
+nav ul a {
+     font-size: 12px;}
+    
+    
 nav ul a svg {
-    display: block;
-    margin: 0 auto 10px;
-
-}
+     display: block;
+     margin: 0 auto 10px;
+    
+    }
 .about-me {
-    padding: 40px;
-}
+     padding: 40px;
+    }
 .services {
-    margin: 70px 0;
-}
-.services .services-container {
-    padding: 0 20px;
-}
+     margin: 70px 0;
+    }
+.services .services-container, .portfolio-container {
+     padding: 0 20px;
+    }
+.portfolio .portfolio-container {
+        margin-top: 70px;
+    }
+    .portfolio {
+        margin: 100px 0 50px;
+    }
