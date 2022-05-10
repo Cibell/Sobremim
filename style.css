@@ -147,7 +147,7 @@ nav ul a {
 
 .about-me .img-container .line.green {
     transform: rotate(-3.3deg);
-    color:  var(--green);
+    border: 1px solid var(--green);
 }
 .services {
     text-align: center;
