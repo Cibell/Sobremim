@@ -292,7 +292,8 @@ nav ul a {
     margin-left: 10px;
 }
 
-p, a {
+p,
+a {
     margin: 0;
     text-decoration: none;
     color: var(--light-grey);
@@ -512,4 +513,11 @@ nav ul a {
 
     .curriculum .container .content .curriculum-info {
         padding: 0 15px;
+        margin: 0 auto;
+    }
+    .secondary-button {
+        margin: 20px;
+    }
+    .contact-paragraph {
+        padding-left: 30px;
     }
